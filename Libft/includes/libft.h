@@ -19,13 +19,26 @@ size_t			ft_strlcat(char	*s1, const char *s2, size_t n);
 char			*ft_strdup(const char *s1);
 char			*ft_strchr(const char *s1, int c);
 char			*ft_strrchr(const char *s1, int c);
-
 char			*ft_strstr(const char *s1, const char *s2);
+char			*ft_strnstr(const char *s1, const char *s2, size_t n);
+int				ft_isalpha(int c);
+int				ft_islower(int c);
+int				ft_isupper(int c);
+int				ft_tolower(int c);
+int				ft_toupper(int c);
+int				ft_isdigit(int c);
+int				ft_isascii(int c);
+int				ft_isprint(int c);
+int 			ft_isalnum(int c);
 
+
+// mine
+int	is_delimiter(char c);
 
 #endif
 
 /*
+* is_delimiter 	done
 
 • ft_strlen 	done
 • ft_strcmp 	done
@@ -37,10 +50,20 @@ char			*ft_strstr(const char *s1, const char *s2);
 • ft_strlcat 	done
 • ft_strdup 	done
 • ft_strchr 	done	
+• ft_strrchr 	done		
 • ft_strstr 	done
-• strrchr 		
+• strnstr 		done
+• ft_isalpha	done
+• ft_tolower 	done
+• ft_toupper 	done
+• ft_isdigit	done
+• ft_isascii 	done
+• ft_isprint 	done
+• ft_isalnum 	done
 
 
+
+• atoi
 
 • memset
 • bzero
@@ -50,16 +73,7 @@ char			*ft_strstr(const char *s1, const char *s2);
 • memchr
 • memcmp
 
-• strnstr
 
-• atoi
-• isalpha
-• isdigit
-• isalnum
-• isascii
-• isprint
-• toupper
-• tolower
 
 */
 

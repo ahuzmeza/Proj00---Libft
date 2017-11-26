@@ -2,7 +2,7 @@
 
 
 #include "includes/libft.h"
-
+#include <ctype.h>
 #include <stdio.h>
 
 int main (int argc, char **argv)
@@ -188,6 +188,168 @@ int main (int argc, char **argv)
 	else
 		printf("	error");
 	printf("\n");
+
+
+/* ft_strnstr */
+	
+	printf("ft_strnstr");
+	char s81[] = "ana are mere";
+	char s82[] = "are";
+
+	if (ft_strnstr(s81,s82,7) == strstr(s81,s82))
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_isalpha */
+
+	printf("ft_isalpha: ");
+	int ok9 = 1;
+	if (ft_isalpha('a') == 0)
+		ok9 = 0;
+	if (ft_isalpha('z') == 0)
+		ok9 = 0;
+	if (ft_isalpha('A') == 0)
+		ok9 = 0;
+	if (ft_isalpha('Z') == 0)
+		ok9 = 0;
+	if (ft_isalpha('.') == 1)
+		ok9 = 0;
+	if (ft_isalpha('3') == 1)
+		ok9 = 0;
+	if (ft_isalpha('=') == 1)
+		ok9 = 0;
+
+	if (ok9)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_tolower */
+
+	printf("ft_tolower: ");
+	int ok10 = 1;
+	if (ft_tolower('A') != tolower('A'))
+		ok10 = 0;
+	if (ft_tolower('Z') != tolower('Z'))
+		ok10 = 0;
+	if (ft_tolower('a') != tolower('a'))
+		ok10 = 0;
+	if (ft_tolower('+') != tolower('+'))
+		ok10 = 0;
+
+	if (ok10)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_toupper */
+
+	printf("ft_toupper: ");
+	int ok11 = 1;
+	if (ft_tolower('a') != tolower('a'))
+		ok11 = 0;
+	if (ft_tolower('z') != tolower('z'))
+		ok11 = 0;
+	if (ft_tolower('A') != tolower('A'))
+		ok11 = 0;
+	if (ft_tolower('+') != tolower('+'))
+		ok11 = 0;
+
+	if (ok11)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_isdigit */
+
+	printf("ft_isdigit: ");
+	int ok12 = 1;
+	if (ft_isdigit('0') == 0)
+		ok12 = 0;
+	if (ft_isdigit('9') == 0)
+		ok12 = 0;
+	if (ft_isdigit('$') == 1)
+		ok12 = 0;
+	if (ft_isdigit('=') == 1)
+		ok12 = 0;
+
+	if (ok12)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_isascii */
+
+
+	printf("ft_isascii: ");
+	int ok13 = 1;
+	if (ft_isascii(-1) == 1)
+		ok13 = 0;
+	if (ft_isascii(128) == 1)
+		ok13 = 0;
+
+	if (ok13)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_isprint */
+
+	printf("ft_isprint ");
+	int ok14 = 1;
+	if (ft_isprint(31) == 1)
+		ok14 = 0;
+	if (ft_isprint(128) == 1)
+		ok14 = 0;
+	if (ft_isprint(67) == 0)
+		ok14 = 0;
+	if (ok14)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_isalnum */
+
+	printf("ft_isalnum: ");
+	int ok15 = 1;
+	if (ft_isalnum('0') == 0)
+		ok15 = 0;
+	if (ft_isalnum('9') == 0)
+		ok15 = 0;
+	if (ft_isalnum('a') == 0)
+		ok15 = 0;
+	if (ft_isalnum('Z') == 0)
+		ok15 = 0;
+	if (ft_isalnum('+') == 1)
+		ok15 = 0;
+	if (ft_isalnum('%') == 1)
+		ok15 = 0;
+
+	if (ok15)
+		printf("	ok");
+	else
+		printf("	error");
+
+	printf("\n");
+
+
+
+
 
 
 

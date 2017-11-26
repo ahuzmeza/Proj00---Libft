@@ -15,12 +15,21 @@ FUNCTIONS =	ft_strlen \
 		ft_strdup \
 		ft_strchr \
 		ft_strrchr \
-		ft_strstr 
+		ft_strstr \
+		ft_strnstr \
+		ft_isalpha \
+		ft_tolower \
+		ft_toupper \
+		ft_isdigit \
+		ft_isascii \
+		ft_isprint \
+		ft_isalnum \
+		is_delimiter
 		 
 		
 # FLAGS = -Wall -Wextra -Werror
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test
 
 all: $(NAME)
 
@@ -36,3 +45,10 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+
+
+
+test:
+	gcc test_functions.c libft.a
+	./a.out
