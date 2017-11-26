@@ -1,9 +1,9 @@
 
 
-
-#include "includes/libft.h"
+#include "libft.h"
 #include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
 int main (int argc, char **argv)
 {
@@ -348,7 +348,37 @@ int main (int argc, char **argv)
 	printf("\n");
 
 
+/* ft_memset */
 
+	printf("ft_memset: ");
+	
+	char s151[]  = "aaaaaaaa - 8";
+	char s152[] =  "aaaaaaaa - 8";
+		
+   	ft_memset(s151,'$',7);
+	   memset(s152,'$',7);
+	if (ft_strcmp(s151,s152) == 0)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
+
+
+/* ft_bzero */
+
+	printf("ft_bzero: ");
+	
+	char s161[]  = "aaaaaaaa - 8";
+	char s162[] =  "aaaaaaaa - 8";
+	
+   	ft_bzero(s161,3);
+	   bzero(s162,3);
+
+	if (ft_strcmp(s161,s162) == 0)
+		printf("	ok");
+	else
+		printf("	error");
+	printf("\n");
 
 
 

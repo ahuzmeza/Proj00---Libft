@@ -1,7 +1,7 @@
 
 
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s1, int c)
 {
